@@ -4,5 +4,7 @@ lint:
 black:
 	black .
 test:
-	pytest tests/
-all: lint black test
+	python -m pytest tests/
+types:
+	mypy workout_manager.py --disallow-untyped-defs
+check: black test types lint

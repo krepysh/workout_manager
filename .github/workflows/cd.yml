@@ -21,7 +21,7 @@ jobs:
         run: flake8 .
 
       - name: Type
-        run: mypy ./ --disallow-untyped-defs
+        run: mypy workout_manager.py --disallow-untyped-defs
 
       - name: Test
         run: python -m pytest --junitxml=junit/test-results.xml --cov=app --cov-report=xml --cov-report=html
